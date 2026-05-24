@@ -1,55 +1,42 @@
-```
+# Compiled and build artifacts
+*.pyc
+__pycache__/
+*.o
+*.obj
+*.class
+*.exe
+*.dll
+*.so
+*.a
+*.out
+
 # Dependencies
 node_modules/
-
-# Build outputs
-dist/
-build/
-target/
-
-# TypeScript/JavaScript
-*.tsbuildinfo
-*.js.map
-*.jsx.map
-*.ts.map
-
-# Logs
-*.log
-
-# Environment
+venv/
+.venv/
 .env
 .env.local
 .env.*
 
-# IDE
-.vscode/
-.idea/
+# Logs and temp files
+*.log
+*.tmp
 *.swp
 *.swo
 
-# OS
-.DS_Store
-Thumbs.db
+# Editors
+.vscode/
+.idea/
 
 # Coverage
 coverage/
 htmlcov/
 .coverage
 
-# Python (if present)
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.Python
-env/
-venv/
-.venv/
-pip-log.txt
-pip-delete-this-directory.txt
-.tox/
-.coverage
-.nox/
-.pytest_cache/
+# Distribution / Build
+dist/
+build/
+target/
+.gradle/
 .mypy_cache/
-```
+.pytest_cache/
