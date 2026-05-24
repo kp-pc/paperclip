@@ -1,60 +1,42 @@
-node_modules
+# Compiled and build artifacts
+*.pyc
+__pycache__/
+*.o
+*.obj
+*.class
+*.exe
+*.dll
+*.so
+*.a
+*.out
+
+# Dependencies
 node_modules/
-**/node_modules
-**/node_modules/
-dist/
-ui/storybook-static/
+venv/
+.venv/
 .env
-*.tsbuildinfo
-drizzle/meta/
-.vite/
-coverage/
-.DS_Store
-data/
-.paperclip/
-.pnpm-store/
-tmp-*
-cli/tmp/
+.env.local
+.env.*
 
-# Scratch/seed scripts (but not scripts/ dir)
-check-*.mjs
-!scripts/check-*.mjs
-new-agent*.json
-newcompany.json
-seed-*.mjs
-server/check-*.mjs
-server/seed-*.mjs
-packages/db/seed-*.mjs
-
-# npm publish build artifacts
-cli/package.dev.json
-
-# Build artifacts in src directories
-server/src/**/*.js
-server/src/**/*.js.map
-server/src/**/*.d.ts
-server/src/**/*.d.ts.map
-tmp/
-feedback-export-*
-diagnostics/
-
-# Editor / tool temp files
+# Logs and temp files
+*.log
 *.tmp
+*.swp
+*.swo
+
+# Editors
 .vscode/
-.claude/settings.local.json
-.paperclip-local/
-/.idea/
-/.agents/
+.idea/
 
-# Doc maintenance cursor
-.doc-review-cursor
+# Coverage
+coverage/
+htmlcov/
+.coverage
 
-# Playwright
-tests/e2e/test-results/
-tests/e2e/playwright-report/
-tests/release-smoke/test-results/
-tests/release-smoke/playwright-report/
-.superset/
-.superpowers/
-.claude/worktrees/
-.herenow
+# Distribution / Build
+dist/
+build/
+target/
+.gradle/
+.mypy_cache/
+.pytest_cache/

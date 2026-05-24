@@ -125,6 +125,16 @@ import {
   modelProfiles as piModelProfiles,
 } from "@paperclipai/adapter-pi-local";
 import {
+  execute as lmStudioExecute,
+  testEnvironment as lmStudioTestEnvironment,
+  sessionCodec as lmStudioSessionCodec,
+} from "@paperclipai/adapter-lmstudio-local/server";
+import {
+  agentConfigurationDoc as lmStudioAgentConfigurationDoc,
+  models as lmStudioModels,
+  modelProfiles as lmStudioModelProfiles,
+} from "@paperclipai/adapter-lmstudio-local";
+import {
   execute as hermesExecute,
   testEnvironment as hermesTestEnvironment,
   sessionCodec as hermesSessionCodec,
@@ -429,6 +439,20 @@ const piLocalAdapter: ServerAdapterModule = {
   getRuntimeCommandSpec: (config) =>
     buildNpmRuntimeCommandSpec(config, "pi", "@mariozechner/pi-coding-agent"),
   agentConfigurationDoc: piAgentConfigurationDoc,
+};
+
+const lmStudioLocalAdapter: ServerAdapterModule = {
+  type: "lmstudio_local",
+  execute: lmStudioExecute,
+  testEnvironment: lmStudioTestEnvironment,
+  sessionCodec: lmStudioSessionCodec,
+  models: lmStudioModels,
+  modelProfiles: lmStudioModelProfiles,
+  supportsLocalAgentJwt: false,
+  supportsInstructionsBundle: true,
+  instructionsPathKey: "instructionsFilePath",
+  requiresMaterializedRuntimeSkills: false,
+  agentConfigurationDoc: lmStudioAgentConfigurationDoc,
 };
 
 // hermes-paperclip-adapter v0.2.0 predates the authToken field; cast is
