@@ -1,60 +1,62 @@
-node_modules
+```
+# Dependencies
 node_modules/
-**/node_modules
-**/node_modules/
+
+# Build artifacts
 dist/
-ui/storybook-static/
+build/
+target/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.py.class
+.Python
+env/
+venv/
+.venv/
 .env
-*.tsbuildinfo
-drizzle/meta/
-.vite/
+.env.local
+.env.*
+
+# Logs
+*.log
+
+# Coverage
 coverage/
-.DS_Store
-data/
-.paperclip/
-.pnpm-store/
-tmp-*
-cli/tmp/
+htmlcov/
+.coverage
 
-# Scratch/seed scripts (but not scripts/ dir)
-check-*.mjs
-!scripts/check-*.mjs
-new-agent*.json
-newcompany.json
-seed-*.mjs
-server/check-*.mjs
-server/seed-*.mjs
-packages/db/seed-*.mjs
-
-# npm publish build artifacts
-cli/package.dev.json
-
-# Build artifacts in src directories
-server/src/**/*.js
-server/src/**/*.js.map
-server/src/**/*.d.ts
-server/src/**/*.d.ts.map
-tmp/
-feedback-export-*
-diagnostics/
-
-# Editor / tool temp files
-*.tmp
+# IDE
 .vscode/
-.claude/settings.local.json
-.paperclip-local/
-/.idea/
-/.agents/
+.idea/
+*.swp
+*.swo
+*.tmp
 
-# Doc maintenance cursor
-.doc-review-cursor
+# OS
+.DS_Store
+Thumbs.db
 
-# Playwright
-tests/e2e/test-results/
-tests/e2e/playwright-report/
-tests/release-smoke/test-results/
-tests/release-smoke/playwright-report/
-.superset/
-.superpowers/
-.claude/worktrees/
-.herenow
+# Compressed
+*.zip
+*.gz
+*.tar
+*.tgz
+*.bz2
+*.xz
+*.7z
+*.rar
+*.zst
+*.lz4
+*.lzh
+*.cab
+*.arj
+*.rpm
+*.deb
+*.Z
+*.lz
+*.lzo
+```
